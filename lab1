@@ -1,0 +1,18 @@
+import numpy as np 
+import scipy as sp 
+import matplotlib.pyplot as plt 
+
+raw = np.loadtxt("lab7.txt")
+
+frequency = raw[:,0]
+length = raw[:,1]
+
+plt.figure(figsize=(6,5))
+
+plt.scatter(length,frequency,marker="o",color="r")
+plt.title("Standing Wave Using Water Tube")
+plt.xlabel("1/4L (m^-1)")
+plt.ylabel("Frequency (Hz)")
+
+plt.tight_layout()
+plt.show()
